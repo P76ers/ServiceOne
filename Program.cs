@@ -15,6 +15,9 @@ namespace ServiceOne
     [STAThread]
     static void Main()
     {
+      Database.CreateDatabase("ServiceOne");
+      Database.CreateTables();
+      // Database.DropDatabase("ServiceOne");
       Application.EnableVisualStyles();
       Application.SetCompatibleTextRenderingDefault(false);
       Application.Run(new Form1());
