@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ServiceOne.Model;
+using ServiceOne.Model.Database;
 
 namespace ServiceOne
 {
@@ -15,12 +16,18 @@ namespace ServiceOne
     [STAThread]
     static void Main()
     {
-      Database.CreateDatabase("ServiceOne");
-      Database.CreateTables();
-      // Database.DropDatabase("ServiceOne");
+      DBModel.CreateDatabase("ServiceOne");
+      DBModel.CreateTables();
+      // DBModel.DropDatabase("ServiceOne");
+
+      // Test Area
+      DBCrudTest.Run();
+      
+
       Application.EnableVisualStyles();
       Application.SetCompatibleTextRenderingDefault(false);
       Application.Run(new Form1());
+      
     }
   }
 }

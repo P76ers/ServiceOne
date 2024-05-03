@@ -79,9 +79,27 @@
         <Compile Include="Form1.Designer.cs">
             <DependentUpon>Form1.cs</DependentUpon>
         </Compile>
-        <Compile Include="Model\Database.cs" />
+        <Compile Include="Model\Classes\Artikel.cs" />
+        <Compile Include="Model\Classes\Artikelkategorien.cs" />
+        <Compile Include="Model\Classes\Bestelldetails.cs" />
+        <Compile Include="Model\Classes\Bestellung.cs" />
+        <Compile Include="Model\Classes\Kunde.cs" />
+        <Compile Include="Model\Classes\Lager.cs" />
+        <Compile Include="Model\Classes\Techniker.cs" />
+        <Compile Include="Model\Database\DBArtikel.cs" />
+        <Compile Include="Model\Database\DBArtikelkategorien.cs" />
+        <Compile Include="Model\Database\DBBestelldetails.cs" />
+        <Compile Include="Model\Database\DBBestellung.cs" />
+        <Compile Include="Model\Database\DBKunde.cs" />
+        <Compile Include="Model\Database\DBLager.cs" />
+        <Compile Include="Model\Database\DBModel.cs" />
+        <Compile Include="Model\Database\DBTechniker.cs" />
+        <Compile Include="Model\DBCrudTest.cs" />
         <Compile Include="Program.cs"/>
         <Compile Include="Properties\AssemblyInfo.cs"/>
+        <EmbeddedResource Include="Form1.resx">
+          <DependentUpon>Form1.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="Properties\Resources.resx">
             <Generator>ResXFileCodeGenerator</Generator>
             <LastGenOutput>Resources.Designer.cs</LastGenOutput>
