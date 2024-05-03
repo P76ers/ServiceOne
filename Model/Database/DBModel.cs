@@ -1,14 +1,19 @@
 using System;
+using System.Data;
 using MySqlConnector;
 
-namespace ServiceOne.Model
+namespace ServiceOne.Model.Database
 {
-  public class Database
+  public class DBModel
   {
-    private static string connStr = "server=127.0.0.1;database=serviceone;user=root;password= ;";
-    private static MySqlConnection connection;
-    private static string sql = "";
-    private static MySqlCommand command;
+    protected static string connStr = "server=127.0.0.1;database=serviceone;user=root;password= ;";
+    protected static MySqlConnection connection;
+    protected static string sql = "";
+    protected static MySqlCommand command;
+    protected static MySqlDataReader reader;
+    protected static DataSet dataset;
+    protected static MySqlDataAdapter adapter;
+    
 
     public static void ConnectServer()
     {
@@ -17,7 +22,7 @@ namespace ServiceOne.Model
         string connStrNoDB = "server=127.0.0.1;database=;user=root;password= ;";
         connection = new MySqlConnection(connStrNoDB);
         connection.Open();
-        Console.WriteLine("ok");
+        // Console.WriteLine("ok");
       }
       catch (Exception e)
       {
@@ -31,7 +36,7 @@ namespace ServiceOne.Model
       {
         connection = new MySqlConnection(connStr);
         connection.Open();
-        Console.WriteLine("Verbunden!");
+        // Console.WriteLine("Verbunden!");
       }
       catch (Exception e)
       {
@@ -64,21 +69,21 @@ namespace ServiceOne.Model
     public static void CreateTables()
     {
       ConnectDatabase();
-      
+
       sql = "CREATE TABLE IF NOT EXISTS artikelkategorien" +
             "(" +
             "KategorieID int AUTO_INCREMENT PRIMARY KEY," +
             "Kategoriename varchar(255)," +
-            "Beschreibung int(70)" +
+            "Beschreibung varchar(255)" +
             ")" +
             ";";
 
       command = new MySqlCommand(sql, connection);
       command.ExecuteNonQuery();
-      
+
       sql = "CREATE TABLE IF NOT EXISTS artikel" +
             "(" +
-            "ArtikelID int PRIMARY KEY," +
+            "ArtikelID int AUTO_INCREMENT PRIMARY KEY," +
             "MaterialNr int(11)," +
             "Artikelname varchar(70)," +
             "Beschreibung longtext," +
@@ -100,6 +105,7 @@ namespace ServiceOne.Model
             "Vorname varchar(255)," +
             "Nachname varchar(255)," +
             "Strasse varchar(255)," +
+            "Hausnummer varchar(255)," +
             "PLZ varchar(255)," +
             "Ort varchar(255)," +
             "Email varchar(255)," +
@@ -127,7 +133,7 @@ namespace ServiceOne.Model
             "(" +
             "BestellID int AUTO_INCREMENT PRIMARY KEY," +
             "KundenNr int(11)," +
-            "Datum datetime(6)," +
+            "Datum date," +
             "CONSTRAINT fkKundenBestellungen FOREIGN KEY (KundenNr)" +
             "REFERENCES Kunden (KundenID)" +
             ")" +
@@ -135,31 +141,31 @@ namespace ServiceOne.Model
 
       command = new MySqlCommand(sql, connection);
       command.ExecuteNonQuery();
-      
-      sql = "CREATE TABLE IF NOT EXISTS bestellungendetails" +
+
+      sql = "CREATE TABLE IF NOT EXISTS bestelldetails" +
             "(" +
             "BestellNr int(11)," +
             "TechnikerNr int(11)," +
             "ArtikelNr int(11)," +
             "Anzahl int(11)," +
             "PRIMARY KEY (BestellNr, TechnikerNr)," +
-            "CONSTRAINT fkBestellungenBestellungsdetails FOREIGN KEY(BestellNr)" +
+            "CONSTRAINT fkBestellungenBestelldetails FOREIGN KEY(BestellNr)" +
             "REFERENCES bestellungen (BestellID)," +
-            "CONSTRAINT fkTechnikerBestellungsdetails FOREIGN KEY (TechnikerNr)" +
+            "CONSTRAINT fkTechnikerBestelldetails FOREIGN KEY (TechnikerNr)" +
             "REFERENCES techniker (TechnikerID)," +
-            "CONSTRAINT fkArtikelBestellungsdetails FOREIGN KEY (ArtikelNr)" +
+            "CONSTRAINT fkArtikelBestelldetails FOREIGN KEY (ArtikelNr)" +
             "REFERENCES artikel (ArtikelID)" +
             ")" +
             ";";
 
       command = new MySqlCommand(sql, connection);
       command.ExecuteNonQuery();
-      
+
       sql = "CREATE TABLE IF NOT EXISTS lager" +
             "(" +
+            "LagerID int AUTO_INCREMENT PRIMARY KEY," +
             "Lagername varchar(70)," +
             "TechnikerNr int(70)," +
-            "PRIMARY KEY (Lagername, TechnikerNr)," +
             "Bestand int(11)," +
             "Mindestbestand int(11)," +
             "ArtikelNr int(11)," +
@@ -172,10 +178,10 @@ namespace ServiceOne.Model
 
       command = new MySqlCommand(sql, connection);
       command.ExecuteNonQuery();
-      
 
-      
       connection.Dispose();
     }
+    
+    
   }
 }
