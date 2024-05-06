@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ServiceOne.Model;
 using ServiceOne.Model.Database;
+using ServiceOne.Views;
 
 namespace ServiceOne
 {
@@ -26,7 +27,7 @@ namespace ServiceOne
 
       Application.EnableVisualStyles();
       Application.SetCompatibleTextRenderingDefault(false);
-      Application.Run(new Form1());
+      Application.Run(new FormMain());
       
     }
   }

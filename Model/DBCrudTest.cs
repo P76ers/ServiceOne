@@ -189,10 +189,10 @@ namespace ServiceOne.Model
 
       // Delete
       // DBLager.DeleteLager(lager2);
-      DBLager.UpdateLager(lager3);
 
       // Update
-
+      // DBLager.UpdateLager(lager3);
+      
       #endregion
     }
   }
