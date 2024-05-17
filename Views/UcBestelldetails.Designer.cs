@@ -31,6 +31,9 @@ namespace ServiceOne.Views
     /// </summary>
     private void InitializeComponent()
     {
+      System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+      System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+      System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
       this.panelArtikel = new System.Windows.Forms.Panel();
       this.dataGridView = new System.Windows.Forms.DataGridView();
       this.Kundendaten = new System.Windows.Forms.GroupBox();
@@ -62,13 +65,38 @@ namespace ServiceOne.Views
       // 
       // dataGridView
       // 
+      dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+      dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+      dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+      dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+      dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+      dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+      this.dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
       this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+      dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+      dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+      dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+      dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+      dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+      dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+      this.dataGridView.DefaultCellStyle = dataGridViewCellStyle2;
       this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
       this.dataGridView.Location = new System.Drawing.Point(0, 0);
       this.dataGridView.Name = "dataGridView";
+      dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+      dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+      dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+      dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+      dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+      dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+      this.dataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
       this.dataGridView.RowTemplate.Height = 46;
       this.dataGridView.Size = new System.Drawing.Size(4000, 522);
       this.dataGridView.TabIndex = 3;
+      this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
       // 
       // Kundendaten
       // 
@@ -101,6 +129,7 @@ namespace ServiceOne.Views
       this.btnDelete.TabIndex = 15;
       this.btnDelete.Text = "DELETE";
       this.btnDelete.UseVisualStyleBackColor = true;
+      this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
       // 
       // label2
       // 
@@ -140,6 +169,7 @@ namespace ServiceOne.Views
       this.btnUpdate.TabIndex = 14;
       this.btnUpdate.Text = "UPDATE";
       this.btnUpdate.UseVisualStyleBackColor = true;
+      this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
       // 
       // txtBoxArtikelNr
       // 
@@ -174,6 +204,7 @@ namespace ServiceOne.Views
       this.btnReset.TabIndex = 12;
       this.btnReset.Text = "RESET";
       this.btnReset.UseVisualStyleBackColor = true;
+      this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
       // 
       // label3
       // 
@@ -193,6 +224,7 @@ namespace ServiceOne.Views
       this.btnInsert.TabIndex = 13;
       this.btnInsert.Text = "INSERT";
       this.btnInsert.UseVisualStyleBackColor = true;
+      this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
       // 
       // txtBoxTechnikerNr
       // 

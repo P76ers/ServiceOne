@@ -34,7 +34,7 @@ namespace ServiceOne.Views
       this.panelArtikel = new System.Windows.Forms.Panel();
       this.dataGridView = new System.Windows.Forms.DataGridView();
       this.Kundendaten = new System.Windows.Forms.GroupBox();
-      this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+      this.txtBoxRichBeschreibung = new System.Windows.Forms.RichTextBox();
       this.btnDelete = new System.Windows.Forms.Button();
       this.label2 = new System.Windows.Forms.Label();
       this.label1 = new System.Windows.Forms.Label();
@@ -67,11 +67,12 @@ namespace ServiceOne.Views
       this.dataGridView.RowTemplate.Height = 46;
       this.dataGridView.Size = new System.Drawing.Size(4000, 522);
       this.dataGridView.TabIndex = 3;
+      this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
       // 
       // Kundendaten
       // 
       this.Kundendaten.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
-      this.Kundendaten.Controls.Add(this.richTextBox1);
+      this.Kundendaten.Controls.Add(this.txtBoxRichBeschreibung);
       this.Kundendaten.Controls.Add(this.btnDelete);
       this.Kundendaten.Controls.Add(this.label2);
       this.Kundendaten.Controls.Add(this.label1);
@@ -88,13 +89,13 @@ namespace ServiceOne.Views
       this.Kundendaten.TabStop = false;
       this.Kundendaten.Text = "Artikelkategorien";
       // 
-      // richTextBox1
+      // txtBoxRichBeschreibung
       // 
-      this.richTextBox1.Location = new System.Drawing.Point(548, 271);
-      this.richTextBox1.Name = "richTextBox1";
-      this.richTextBox1.Size = new System.Drawing.Size(436, 371);
-      this.richTextBox1.TabIndex = 3;
-      this.richTextBox1.Text = "";
+      this.txtBoxRichBeschreibung.Location = new System.Drawing.Point(548, 271);
+      this.txtBoxRichBeschreibung.Name = "txtBoxRichBeschreibung";
+      this.txtBoxRichBeschreibung.Size = new System.Drawing.Size(436, 371);
+      this.txtBoxRichBeschreibung.TabIndex = 3;
+      this.txtBoxRichBeschreibung.Text = "";
       // 
       // btnDelete
       // 
@@ -105,6 +106,7 @@ namespace ServiceOne.Views
       this.btnDelete.TabIndex = 15;
       this.btnDelete.Text = "DELETE";
       this.btnDelete.UseVisualStyleBackColor = true;
+      this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
       // 
       // label2
       // 
@@ -135,6 +137,7 @@ namespace ServiceOne.Views
       this.btnUpdate.TabIndex = 14;
       this.btnUpdate.Text = "UPDATE";
       this.btnUpdate.UseVisualStyleBackColor = true;
+      this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
       // 
       // txtBoxKategorieID
       // 
@@ -153,6 +156,7 @@ namespace ServiceOne.Views
       this.btnReset.TabIndex = 12;
       this.btnReset.Text = "RESET";
       this.btnReset.UseVisualStyleBackColor = true;
+      this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
       // 
       // label3
       // 
@@ -172,6 +176,7 @@ namespace ServiceOne.Views
       this.btnInsert.TabIndex = 13;
       this.btnInsert.Text = "INSERT";
       this.btnInsert.UseVisualStyleBackColor = true;
+      this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
       // 
       // txtBoxKategoriename
       // 
@@ -191,6 +196,7 @@ namespace ServiceOne.Views
       this.Location = new System.Drawing.Point(15, 15);
       this.Name = "UcArtikelkategorien";
       this.Size = new System.Drawing.Size(4000, 1600);
+      this.Click += new System.EventHandler(this.btnInsert_Click);
       this.panelArtikel.ResumeLayout(false);
       ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
       this.Kundendaten.ResumeLayout(false);
@@ -198,7 +204,7 @@ namespace ServiceOne.Views
       this.ResumeLayout(false);
     }
 
-    private System.Windows.Forms.RichTextBox richTextBox1;
+    private System.Windows.Forms.RichTextBox txtBoxRichBeschreibung;
 
     private System.Windows.Forms.GroupBox Kundendaten;
     private System.Windows.Forms.Button btnDelete;

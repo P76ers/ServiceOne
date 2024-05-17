@@ -93,6 +93,7 @@
     <Compile Include="Model\Database\DBLager.cs" />
     <Compile Include="Model\Database\DBModel.cs" />
     <Compile Include="Model\Database\DBTechniker.cs" />
+    <Compile Include="Model\DBAddData.cs" />
     <Compile Include="Model\DBCrudTest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -106,16 +107,16 @@
     <Compile Include="Views\UcLager.Designer.cs" />
     <Compile Include="Views\UcBestellungen.cs" />
     <Compile Include="Views\UcBestellungen.Designer.cs" />
-    <Compile Include="Views\UcKunden.cs" />
-    <Compile Include="Views\UcKunden.Designer.cs" />
     <Compile Include="Views\UcBestelldetails.cs" />
     <Compile Include="Views\UcBestelldetails.Designer.cs" />
     <Compile Include="Views\UcHome.cs" />
     <Compile Include="Views\UcHome.Designer.cs" />
+    <Compile Include="Views\UcKunden.cs" />
+    <Compile Include="Views\UcKunden.Designer.cs" />
     <Compile Include="Views\UcTechniker.cs" />
     <Compile Include="Views\UcTechniker.Designer.cs" />
-    <Compile Include="Views\UcNeueBestellung.cs" />
-    <Compile Include="Views\UcNeueBestellung.Designer.cs" />
+    <Compile Include="Views\UcAuftrag.cs" />
+    <Compile Include="Views\UcAuftrag.Designer.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -130,11 +131,11 @@
     <EmbeddedResource Include="Views\UcArtikelkategorien.resx" />
     <EmbeddedResource Include="Views\UcLager.resx" />
     <EmbeddedResource Include="Views\UcBestellungen.resx" />
-    <EmbeddedResource Include="Views\UcKunden.resx" />
     <EmbeddedResource Include="Views\UcBestelldetails.resx" />
     <EmbeddedResource Include="Views\UcHome.resx" />
+    <EmbeddedResource Include="Views\UcKunden.resx" />
     <EmbeddedResource Include="Views\UcTechniker.resx" />
-    <EmbeddedResource Include="Views\UcNeueBestellung.resx" />
+    <EmbeddedResource Include="Views\UcAuftrag.resx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -151,6 +152,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Content Include="readme.md" />
+    <Content Include="Ressources\database.png" />
+    <Content Include="Ressources\serviceone.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

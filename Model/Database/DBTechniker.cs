@@ -32,7 +32,7 @@ namespace ServiceOne.Model.Database
         connection.Close();
       }
     }
-    
+
     public static void InsertIntoTechniker(Techniker techniker)
     {
       try
@@ -49,7 +49,6 @@ namespace ServiceOne.Model.Database
         command.Parameters.AddWithValue("Vorname", techniker.Vorname);
         command.Parameters.AddWithValue("Nachname", techniker.Nachname);
         command.Parameters.AddWithValue("Kfz", techniker.Kfz);
-
 
 
         int rowsAffected = command.ExecuteNonQuery();
@@ -72,7 +71,7 @@ namespace ServiceOne.Model.Database
         connection.Dispose();
       }
     }
-    
+
     public static void DeleteTechniker(Techniker techniker)
     {
       ConnectDatabase();
@@ -103,7 +102,7 @@ namespace ServiceOne.Model.Database
         connection.Dispose();
       }
     }
-    
+
     public static void UpdateTechniker(Techniker techniker)
     {
       ConnectDatabase();
@@ -113,9 +112,9 @@ namespace ServiceOne.Model.Database
         sql = "UPDATE techniker " +
               "SET Vorname=@vorname,Nachname=@nachname,KFZ=@kfz " +
               "WHERE TechnikerID= " + techniker.TechnikerId + ";";
-      
+
         command = new MySqlCommand(sql, connection);
-      
+
         command.Parameters.AddWithValue("Vorname", techniker.Vorname);
         command.Parameters.AddWithValue("Nachname", techniker.Nachname);
         command.Parameters.AddWithValue("Kfz", techniker.Kfz);
@@ -140,10 +139,6 @@ namespace ServiceOne.Model.Database
       {
         connection.Dispose();
       }
-      
     }
-
-
-
   }
 }

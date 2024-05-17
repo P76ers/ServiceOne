@@ -13,7 +13,7 @@ namespace ServiceOne.Model.Database
     protected static MySqlDataReader reader;
     protected static DataSet dataset;
     protected static MySqlDataAdapter adapter;
-    
+
 
     public static void ConnectServer()
     {
@@ -145,10 +145,10 @@ namespace ServiceOne.Model.Database
       sql = "CREATE TABLE IF NOT EXISTS bestelldetails" +
             "(" +
             "BestellNr int(11)," +
-            "TechnikerNr int(11)," +
             "ArtikelNr int(11)," +
-            "Anzahl int(11)," +
-            "PRIMARY KEY (BestellNr, TechnikerNr)," +
+            "TechnikerNr int(11)," +
+            "Anzahl decimal(19,2)," +
+            "PRIMARY KEY (BestellNr, ArtikelNr)," +
             "CONSTRAINT fkBestellungenBestelldetails FOREIGN KEY(BestellNr)" +
             "REFERENCES bestellungen (BestellID)," +
             "CONSTRAINT fkTechnikerBestelldetails FOREIGN KEY (TechnikerNr)" +
@@ -163,15 +163,14 @@ namespace ServiceOne.Model.Database
 
       sql = "CREATE TABLE IF NOT EXISTS lager" +
             "(" +
-            "LagerID int AUTO_INCREMENT PRIMARY KEY," +
-            "Lagername varchar(70)," +
-            "TechnikerNr int(70)," +
+            "LagerNr int(11)," +
+            "ArtikelNr int(11)," +
             "Bestand int(11)," +
             "Mindestbestand int(11)," +
-            "ArtikelNr int(11)," +
+            "PRIMARY KEY (LagerNr, ArtikelNr)," +
             "CONSTRAINT fkArtikelLager FOREIGN KEY (ArtikelNr)" +
             "REFERENCES artikel (ArtikelID)," +
-            "CONSTRAINT fkTechnikerLager FOREIGN KEY (TechnikerNr)" +
+            "CONSTRAINT fkTechnikerLager FOREIGN KEY (LagerNr)" +
             "REFERENCES techniker (TechnikerID)" +
             ")" +
             ";";
@@ -181,7 +180,5 @@ namespace ServiceOne.Model.Database
 
       connection.Dispose();
     }
-    
-    
   }
 }

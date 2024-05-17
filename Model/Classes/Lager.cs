@@ -2,52 +2,42 @@ namespace ServiceOne.Model.Classes
 {
   public class Lager
   {
-    private int lagerId;
-    private string lagerName;
-    private int technikerNr;
+    private int lagerNr;
+    private int artikelNr;
     private int bestand;
     private int mindestBestand;
-    private int artikelNr;
-    
-    public Lager(){}
 
-    public Lager(int lagerId, string lagerName, int technikerNr, int bestand, int mindestBestand, int artikelNr)
+    public Lager()
     {
-      this.lagerId = lagerId;
-      this.lagerName = lagerName;
-      this.technikerNr = technikerNr;
-      this.bestand = bestand;
-      this.mindestBestand = mindestBestand;
-      this.artikelNr = artikelNr;
     }
 
-    public Lager(string lagerName, int technikerNr, int bestand, int mindestBestand, int artikelNr)
+    public Lager(int lagerNr, int artikelNr, int bestand, int mindestBestand)
     {
-      this.lagerName = lagerName;
-      this.technikerNr = technikerNr;
+      this.lagerNr = lagerNr;
+      this.artikelNr = artikelNr;
       this.bestand = bestand;
       this.mindestBestand = mindestBestand;
+    }
+
+    public Lager(int artikelNr, int bestand, int mindestBestand)
+    {
       this.artikelNr = artikelNr;
+      this.bestand = bestand;
+      this.mindestBestand = mindestBestand;
     }
 
     #region Properties
 
-    public int LagerId
+    public int LagerNr
     {
-      get => lagerId;
-      set => lagerId = value;
+      get => lagerNr;
+      set => lagerNr = value;
     }
 
-    public string LagerName
+    public int ArtikelNr
     {
-      get => lagerName;
-      set => lagerName = value;
-    }
-
-    public int TechnikerNr
-    {
-      get => technikerNr;
-      set => technikerNr = value;
+      get => artikelNr;
+      set => artikelNr = value;
     }
 
     public int Bestand
@@ -60,12 +50,6 @@ namespace ServiceOne.Model.Classes
     {
       get => mindestBestand;
       set => mindestBestand = value;
-    }
-
-    public int ArtikelNr
-    {
-      get => artikelNr;
-      set => artikelNr = value;
     }
 
     #endregion

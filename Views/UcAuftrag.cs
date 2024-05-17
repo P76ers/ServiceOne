@@ -3,16 +3,12 @@ using ServiceOne.Model.Database;
 
 namespace ServiceOne.Views
 {
-  
-  
-  public partial class UcNeueBestellung : UserControl
+  public partial class UcAuftrag : UserControl
   {
-    
-    public UcNeueBestellung()
+    public UcAuftrag()
     {
       InitializeComponent();
-      DBKunde.SelectKunden(dataGridView);
-
+      // DBKunde.SelectKunden(dataGridView);
     }
   }
 }

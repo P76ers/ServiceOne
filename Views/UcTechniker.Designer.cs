@@ -69,6 +69,7 @@ namespace ServiceOne.Views
       this.dataGridView.RowTemplate.Height = 46;
       this.dataGridView.Size = new System.Drawing.Size(4000, 522);
       this.dataGridView.TabIndex = 3;
+      this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
       // 
       // Kundendaten
       // 
@@ -109,6 +110,7 @@ namespace ServiceOne.Views
       this.btnDelete.TabIndex = 15;
       this.btnDelete.Text = "DELETE";
       this.btnDelete.UseVisualStyleBackColor = true;
+      this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
       // 
       // label2
       // 
@@ -148,6 +150,7 @@ namespace ServiceOne.Views
       this.btnUpdate.TabIndex = 14;
       this.btnUpdate.Text = "UPDATE";
       this.btnUpdate.UseVisualStyleBackColor = true;
+      this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
       // 
       // txtBoxNachname
       // 
@@ -174,6 +177,7 @@ namespace ServiceOne.Views
       this.btnReset.TabIndex = 12;
       this.btnReset.Text = "RESET";
       this.btnReset.UseVisualStyleBackColor = true;
+      this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
       // 
       // label3
       // 
@@ -193,6 +197,7 @@ namespace ServiceOne.Views
       this.btnInsert.TabIndex = 13;
       this.btnInsert.Text = "INSERT";
       this.btnInsert.UseVisualStyleBackColor = true;
+      this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
       // 
       // txtBoxVorname
       // 

@@ -703,7 +703,7 @@
         AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btnWarenkorb.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnAuftrag.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAYAAAB5fY51AAAABGdBTUEAALGPC/xhBQAAF8lJREFUeF7t
         3XncfnOdx3HZ912SaqKksUUTSmKaFgZlJDIZTJaizM9IolRUaixlaxCyxJRdC2V7hCmKSRm0YCwRCuGR

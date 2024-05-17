@@ -13,10 +13,10 @@ namespace ServiceOne.Model.Database
       try
       {
         ConnectDatabase();
-        
+
         sql = "SELECT * FROM kunden;";
         command = new MySqlCommand(sql, connection);
-        
+
         adapter = new MySqlDataAdapter(command);
         dataset = new DataSet();
         adapter.Fill(dataset);
@@ -32,7 +32,7 @@ namespace ServiceOne.Model.Database
         connection.Close();
       }
     }
-    
+
     public static void InsertIntoKunden(Kunde kunde)
     {
       try
@@ -109,7 +109,7 @@ namespace ServiceOne.Model.Database
         connection.Dispose();
       }
     }
-    
+
     public static void UpdateKunden(Kunde kunde)
     {
       ConnectDatabase();
@@ -120,9 +120,9 @@ namespace ServiceOne.Model.Database
               "SET Firma=@firma,Vorname=@vorname,Nachname=@nachname,Strasse=@strasse,Hausnummer=@hausnummer," +
               "PLZ=@plz, Ort=@ort,Email=@email, Telefon=@telefon, Rabatt=@rabatt " +
               "WHERE KundenID= " + kunde.KundenId + ";";
-      
+
         command = new MySqlCommand(sql, connection);
-      
+
         command.Parameters.AddWithValue("Firma", kunde.Firma);
         command.Parameters.AddWithValue("Vorname", kunde.Vorname);
         command.Parameters.AddWithValue("Nachname", kunde.Nachname);
@@ -154,8 +154,6 @@ namespace ServiceOne.Model.Database
       {
         connection.Dispose();
       }
-      
     }
-    
   }
 }

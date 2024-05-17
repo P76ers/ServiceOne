@@ -2,7 +2,7 @@ using System.ComponentModel;
 
 namespace ServiceOne.Views
 {
-  partial class UcNeueBestellung
+  partial class UcAuftrag
   {
     /// <summary> 
     /// Required designer variable.
@@ -48,7 +48,7 @@ namespace ServiceOne.Views
       this.btnUpdate = new System.Windows.Forms.Button();
       this.txtBoxVorname = new System.Windows.Forms.TextBox();
       this.label9 = new System.Windows.Forms.Label();
-      this.txtBoxKundenID = new System.Windows.Forms.TextBox();
+      this.txtBoxKundenID2 = new System.Windows.Forms.TextBox();
       this.label10 = new System.Windows.Forms.Label();
       this.txtBoxNachname = new System.Windows.Forms.TextBox();
       this.btnReset = new System.Windows.Forms.Button();
@@ -123,7 +123,7 @@ namespace ServiceOne.Views
       this.Kundendaten.Controls.Add(this.btnUpdate);
       this.Kundendaten.Controls.Add(this.txtBoxVorname);
       this.Kundendaten.Controls.Add(this.label9);
-      this.Kundendaten.Controls.Add(this.txtBoxKundenID);
+      this.Kundendaten.Controls.Add(this.txtBoxKundenID2);
       this.Kundendaten.Controls.Add(this.label10);
       this.Kundendaten.Controls.Add(this.txtBoxNachname);
       this.Kundendaten.Controls.Add(this.btnReset);
@@ -218,13 +218,13 @@ namespace ServiceOne.Views
       this.label9.TabIndex = 25;
       this.label9.Text = "Einzelpreis";
       // 
-      // txtBoxKundenID
+      // txtBoxKundenID2
       // 
-      this.txtBoxKundenID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.txtBoxKundenID.Location = new System.Drawing.Point(548, 71);
-      this.txtBoxKundenID.Name = "txtBoxKundenID";
-      this.txtBoxKundenID.Size = new System.Drawing.Size(436, 71);
-      this.txtBoxKundenID.TabIndex = 1;
+      this.txtBoxKundenID2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.txtBoxKundenID2.Location = new System.Drawing.Point(548, 71);
+      this.txtBoxKundenID2.Name = "txtBoxKundenID2";
+      this.txtBoxKundenID2.Size = new System.Drawing.Size(436, 71);
+      this.txtBoxKundenID2.TabIndex = 1;
       // 
       // label10
       // 
@@ -381,7 +381,7 @@ namespace ServiceOne.Views
       this.Controls.Add(this.dataGridViewEinkaufswagen);
       this.Controls.Add(this.panelArtikel);
       this.Location = new System.Drawing.Point(15, 15);
-      this.Name = "UcNeueBestellung";
+      this.Name = "UcAuftrag";
       this.Size = new System.Drawing.Size(4000, 1600);
       this.panelArtikel.ResumeLayout(false);
       ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
@@ -402,7 +402,7 @@ namespace ServiceOne.Views
     private System.Windows.Forms.Button btnUpdate;
     private System.Windows.Forms.TextBox txtBoxVorname;
     private System.Windows.Forms.Label label9;
-    private System.Windows.Forms.TextBox txtBoxKundenID;
+    private System.Windows.Forms.TextBox txtBoxKundenID2;
     private System.Windows.Forms.Label label10;
     private System.Windows.Forms.TextBox txtBoxNachname;
     private System.Windows.Forms.Button btnReset;

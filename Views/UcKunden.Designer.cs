@@ -32,112 +32,181 @@ namespace ServiceOne.Views
     private void InitializeComponent()
     {
       this.panelArtikel = new System.Windows.Forms.Panel();
-      this.Kundendaten = new System.Windows.Forms.GroupBox();
+      this.dataGridView = new System.Windows.Forms.DataGridView();
+      this.grpBox = new System.Windows.Forms.GroupBox();
+      this.label9 = new System.Windows.Forms.Label();
+      this.label10 = new System.Windows.Forms.Label();
+      this.label11 = new System.Windows.Forms.Label();
+      this.txtBoxEmail = new System.Windows.Forms.TextBox();
+      this.txtBoxPostleitzahl = new System.Windows.Forms.TextBox();
+      this.txtBoxTelefon = new System.Windows.Forms.TextBox();
+      this.label12 = new System.Windows.Forms.Label();
+      this.label13 = new System.Windows.Forms.Label();
+      this.txtBoxOrt = new System.Windows.Forms.TextBox();
+      this.txtBoxRabatt = new System.Windows.Forms.TextBox();
       this.btnDelete = new System.Windows.Forms.Button();
       this.label2 = new System.Windows.Forms.Label();
       this.label1 = new System.Windows.Forms.Label();
-      this.txtBoxEmail = new System.Windows.Forms.TextBox();
       this.label4 = new System.Windows.Forms.Label();
       this.btnUpdate = new System.Windows.Forms.Button();
       this.txtBoxVorname = new System.Windows.Forms.TextBox();
-      this.label9 = new System.Windows.Forms.Label();
       this.txtBoxKundenID = new System.Windows.Forms.TextBox();
-      this.label10 = new System.Windows.Forms.Label();
       this.txtBoxHausnummer = new System.Windows.Forms.TextBox();
       this.txtBoxNachname = new System.Windows.Forms.TextBox();
       this.btnReset = new System.Windows.Forms.Button();
       this.label3 = new System.Windows.Forms.Label();
-      this.label7 = new System.Windows.Forms.Label();
-      this.txtBoxOrt = new System.Windows.Forms.TextBox();
       this.btnInsert = new System.Windows.Forms.Button();
-      this.txtBoxTelefon = new System.Windows.Forms.TextBox();
       this.label6 = new System.Windows.Forms.Label();
       this.label5 = new System.Windows.Forms.Label();
-      this.txtBoxRabatt = new System.Windows.Forms.TextBox();
       this.txtBoxFirma = new System.Windows.Forms.TextBox();
-      this.txtBoxPlz = new System.Windows.Forms.TextBox();
-      this.label8 = new System.Windows.Forms.Label();
-      this.label11 = new System.Windows.Forms.Label();
       this.txtBoxStrasse = new System.Windows.Forms.TextBox();
-      this.dataGridView = new System.Windows.Forms.DataGridView();
-      this.groupBox1 = new System.Windows.Forms.GroupBox();
-      this.button1 = new System.Windows.Forms.Button();
-      this.label12 = new System.Windows.Forms.Label();
-      this.label13 = new System.Windows.Forms.Label();
-      this.textBox1 = new System.Windows.Forms.TextBox();
-      this.label14 = new System.Windows.Forms.Label();
-      this.button2 = new System.Windows.Forms.Button();
-      this.textBox2 = new System.Windows.Forms.TextBox();
-      this.label15 = new System.Windows.Forms.Label();
-      this.textBox3 = new System.Windows.Forms.TextBox();
-      this.label16 = new System.Windows.Forms.Label();
-      this.textBox4 = new System.Windows.Forms.TextBox();
-      this.textBox5 = new System.Windows.Forms.TextBox();
-      this.button3 = new System.Windows.Forms.Button();
-      this.label17 = new System.Windows.Forms.Label();
-      this.label18 = new System.Windows.Forms.Label();
-      this.textBox6 = new System.Windows.Forms.TextBox();
-      this.button4 = new System.Windows.Forms.Button();
-      this.textBox7 = new System.Windows.Forms.TextBox();
-      this.label19 = new System.Windows.Forms.Label();
-      this.label20 = new System.Windows.Forms.Label();
-      this.textBox8 = new System.Windows.Forms.TextBox();
-      this.textBox9 = new System.Windows.Forms.TextBox();
-      this.textBox10 = new System.Windows.Forms.TextBox();
-      this.label21 = new System.Windows.Forms.Label();
-      this.label22 = new System.Windows.Forms.Label();
-      this.textBox11 = new System.Windows.Forms.TextBox();
       this.panelArtikel.SuspendLayout();
-      this.Kundendaten.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
-      this.groupBox1.SuspendLayout();
+      this.grpBox.SuspendLayout();
       this.SuspendLayout();
       // 
       // panelArtikel
       // 
-      this.panelArtikel.Controls.Add(this.Kundendaten);
       this.panelArtikel.Controls.Add(this.dataGridView);
       this.panelArtikel.Dock = System.Windows.Forms.DockStyle.Top;
       this.panelArtikel.Location = new System.Drawing.Point(0, 0);
       this.panelArtikel.Name = "panelArtikel";
       this.panelArtikel.Size = new System.Drawing.Size(4000, 522);
-      this.panelArtikel.TabIndex = 17;
+      this.panelArtikel.TabIndex = 3;
       // 
-      // Kundendaten
+      // dataGridView
       // 
-      this.Kundendaten.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
-      this.Kundendaten.Controls.Add(this.btnDelete);
-      this.Kundendaten.Controls.Add(this.label2);
-      this.Kundendaten.Controls.Add(this.label1);
-      this.Kundendaten.Controls.Add(this.txtBoxEmail);
-      this.Kundendaten.Controls.Add(this.label4);
-      this.Kundendaten.Controls.Add(this.btnUpdate);
-      this.Kundendaten.Controls.Add(this.txtBoxVorname);
-      this.Kundendaten.Controls.Add(this.label9);
-      this.Kundendaten.Controls.Add(this.txtBoxKundenID);
-      this.Kundendaten.Controls.Add(this.label10);
-      this.Kundendaten.Controls.Add(this.txtBoxHausnummer);
-      this.Kundendaten.Controls.Add(this.txtBoxNachname);
-      this.Kundendaten.Controls.Add(this.btnReset);
-      this.Kundendaten.Controls.Add(this.label3);
-      this.Kundendaten.Controls.Add(this.label7);
-      this.Kundendaten.Controls.Add(this.txtBoxOrt);
-      this.Kundendaten.Controls.Add(this.btnInsert);
-      this.Kundendaten.Controls.Add(this.txtBoxTelefon);
-      this.Kundendaten.Controls.Add(this.label6);
-      this.Kundendaten.Controls.Add(this.label5);
-      this.Kundendaten.Controls.Add(this.txtBoxRabatt);
-      this.Kundendaten.Controls.Add(this.txtBoxFirma);
-      this.Kundendaten.Controls.Add(this.txtBoxPlz);
-      this.Kundendaten.Controls.Add(this.label8);
-      this.Kundendaten.Controls.Add(this.label11);
-      this.Kundendaten.Controls.Add(this.txtBoxStrasse);
-      this.Kundendaten.Location = new System.Drawing.Point(10, 600);
-      this.Kundendaten.Name = "Kundendaten";
-      this.Kundendaten.Size = new System.Drawing.Size(2092, 870);
-      this.Kundendaten.TabIndex = 32;
-      this.Kundendaten.TabStop = false;
-      this.Kundendaten.Text = "Kunden";
+      this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+      this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+      this.dataGridView.Location = new System.Drawing.Point(0, 0);
+      this.dataGridView.Name = "dataGridView";
+      this.dataGridView.RowTemplate.Height = 46;
+      this.dataGridView.Size = new System.Drawing.Size(4000, 522);
+      this.dataGridView.TabIndex = 3;
+      this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
+      // 
+      // grpBox
+      // 
+      this.grpBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+      this.grpBox.Controls.Add(this.label9);
+      this.grpBox.Controls.Add(this.label10);
+      this.grpBox.Controls.Add(this.label11);
+      this.grpBox.Controls.Add(this.txtBoxEmail);
+      this.grpBox.Controls.Add(this.txtBoxPostleitzahl);
+      this.grpBox.Controls.Add(this.txtBoxTelefon);
+      this.grpBox.Controls.Add(this.label12);
+      this.grpBox.Controls.Add(this.label13);
+      this.grpBox.Controls.Add(this.txtBoxOrt);
+      this.grpBox.Controls.Add(this.txtBoxRabatt);
+      this.grpBox.Controls.Add(this.btnDelete);
+      this.grpBox.Controls.Add(this.label2);
+      this.grpBox.Controls.Add(this.label1);
+      this.grpBox.Controls.Add(this.label4);
+      this.grpBox.Controls.Add(this.btnUpdate);
+      this.grpBox.Controls.Add(this.txtBoxVorname);
+      this.grpBox.Controls.Add(this.txtBoxKundenID);
+      this.grpBox.Controls.Add(this.txtBoxHausnummer);
+      this.grpBox.Controls.Add(this.txtBoxNachname);
+      this.grpBox.Controls.Add(this.btnReset);
+      this.grpBox.Controls.Add(this.label3);
+      this.grpBox.Controls.Add(this.btnInsert);
+      this.grpBox.Controls.Add(this.label6);
+      this.grpBox.Controls.Add(this.label5);
+      this.grpBox.Controls.Add(this.txtBoxFirma);
+      this.grpBox.Controls.Add(this.txtBoxStrasse);
+      this.grpBox.Location = new System.Drawing.Point(10, 600);
+      this.grpBox.Name = "grpBox";
+      this.grpBox.Size = new System.Drawing.Size(2092, 870);
+      this.grpBox.TabIndex = 32;
+      this.grpBox.TabStop = false;
+      this.grpBox.Text = "Artikel";
+      // 
+      // label9
+      // 
+      this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.label9.Location = new System.Drawing.Point(1070, 171);
+      this.label9.Name = "label9";
+      this.label9.Size = new System.Drawing.Size(475, 71);
+      this.label9.TabIndex = 29;
+      this.label9.Text = "Ort";
+      // 
+      // label10
+      // 
+      this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+      this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.label10.Location = new System.Drawing.Point(1070, 71);
+      this.label10.Name = "label10";
+      this.label10.Size = new System.Drawing.Size(475, 71);
+      this.label10.TabIndex = 23;
+      this.label10.Text = "Postleitzahl";
+      this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+      // 
+      // label11
+      // 
+      this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.label11.Location = new System.Drawing.Point(1070, 371);
+      this.label11.Name = "label11";
+      this.label11.Size = new System.Drawing.Size(475, 71);
+      this.label11.TabIndex = 31;
+      this.label11.Text = "Telefon";
+      // 
+      // txtBoxEmail
+      // 
+      this.txtBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.txtBoxEmail.Location = new System.Drawing.Point(1588, 271);
+      this.txtBoxEmail.Name = "txtBoxEmail";
+      this.txtBoxEmail.Size = new System.Drawing.Size(436, 71);
+      this.txtBoxEmail.TabIndex = 9;
+      // 
+      // txtBoxPostleitzahl
+      // 
+      this.txtBoxPostleitzahl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.txtBoxPostleitzahl.Location = new System.Drawing.Point(1588, 71);
+      this.txtBoxPostleitzahl.Name = "txtBoxPostleitzahl";
+      this.txtBoxPostleitzahl.Size = new System.Drawing.Size(436, 71);
+      this.txtBoxPostleitzahl.TabIndex = 7;
+      // 
+      // txtBoxTelefon
+      // 
+      this.txtBoxTelefon.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.txtBoxTelefon.Location = new System.Drawing.Point(1588, 371);
+      this.txtBoxTelefon.Name = "txtBoxTelefon";
+      this.txtBoxTelefon.Size = new System.Drawing.Size(436, 71);
+      this.txtBoxTelefon.TabIndex = 10;
+      // 
+      // label12
+      // 
+      this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.label12.Location = new System.Drawing.Point(1070, 271);
+      this.label12.Name = "label12";
+      this.label12.Size = new System.Drawing.Size(475, 71);
+      this.label12.TabIndex = 30;
+      this.label12.Text = "Email";
+      // 
+      // label13
+      // 
+      this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.label13.Location = new System.Drawing.Point(1070, 471);
+      this.label13.Name = "label13";
+      this.label13.Size = new System.Drawing.Size(475, 71);
+      this.label13.TabIndex = 32;
+      this.label13.Text = "Rabatt";
+      // 
+      // txtBoxOrt
+      // 
+      this.txtBoxOrt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.txtBoxOrt.Location = new System.Drawing.Point(1588, 171);
+      this.txtBoxOrt.Name = "txtBoxOrt";
+      this.txtBoxOrt.Size = new System.Drawing.Size(436, 71);
+      this.txtBoxOrt.TabIndex = 8;
+      // 
+      // txtBoxRabatt
+      // 
+      this.txtBoxRabatt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.txtBoxRabatt.Location = new System.Drawing.Point(1588, 471);
+      this.txtBoxRabatt.Name = "txtBoxRabatt";
+      this.txtBoxRabatt.Size = new System.Drawing.Size(436, 71);
+      this.txtBoxRabatt.TabIndex = 11;
       // 
       // btnDelete
       // 
@@ -148,6 +217,7 @@ namespace ServiceOne.Views
       this.btnDelete.TabIndex = 15;
       this.btnDelete.Text = "DELETE";
       this.btnDelete.UseVisualStyleBackColor = true;
+      this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
       // 
       // label2
       // 
@@ -169,14 +239,6 @@ namespace ServiceOne.Views
       this.label1.Text = "KundenID";
       this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
       // 
-      // txtBoxEmail
-      // 
-      this.txtBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.txtBoxEmail.Location = new System.Drawing.Point(1585, 268);
-      this.txtBoxEmail.Name = "txtBoxEmail";
-      this.txtBoxEmail.Size = new System.Drawing.Size(436, 71);
-      this.txtBoxEmail.TabIndex = 9;
-      // 
       // label4
       // 
       this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -195,6 +257,7 @@ namespace ServiceOne.Views
       this.btnUpdate.TabIndex = 14;
       this.btnUpdate.Text = "UPDATE";
       this.btnUpdate.UseVisualStyleBackColor = true;
+      this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
       // 
       // txtBoxVorname
       // 
@@ -204,15 +267,6 @@ namespace ServiceOne.Views
       this.txtBoxVorname.Size = new System.Drawing.Size(436, 71);
       this.txtBoxVorname.TabIndex = 3;
       // 
-      // label9
-      // 
-      this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.label9.Location = new System.Drawing.Point(1070, 271);
-      this.label9.Name = "label9";
-      this.label9.Size = new System.Drawing.Size(475, 71);
-      this.label9.TabIndex = 25;
-      this.label9.Text = "Email";
-      // 
       // txtBoxKundenID
       // 
       this.txtBoxKundenID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -220,15 +274,6 @@ namespace ServiceOne.Views
       this.txtBoxKundenID.Name = "txtBoxKundenID";
       this.txtBoxKundenID.Size = new System.Drawing.Size(436, 71);
       this.txtBoxKundenID.TabIndex = 1;
-      // 
-      // label10
-      // 
-      this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.label10.Location = new System.Drawing.Point(1070, 371);
-      this.label10.Name = "label10";
-      this.label10.Size = new System.Drawing.Size(475, 71);
-      this.label10.TabIndex = 27;
-      this.label10.Text = "Telefon";
       // 
       // txtBoxHausnummer
       // 
@@ -255,6 +300,7 @@ namespace ServiceOne.Views
       this.btnReset.TabIndex = 12;
       this.btnReset.Text = "RESET";
       this.btnReset.UseVisualStyleBackColor = true;
+      this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
       // 
       // label3
       // 
@@ -265,23 +311,6 @@ namespace ServiceOne.Views
       this.label3.TabIndex = 13;
       this.label3.Text = "Vorname";
       // 
-      // label7
-      // 
-      this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.label7.Location = new System.Drawing.Point(1070, 71);
-      this.label7.Name = "label7";
-      this.label7.Size = new System.Drawing.Size(475, 71);
-      this.label7.TabIndex = 21;
-      this.label7.Text = "Postleitzahl";
-      // 
-      // txtBoxOrt
-      // 
-      this.txtBoxOrt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.txtBoxOrt.Location = new System.Drawing.Point(1588, 171);
-      this.txtBoxOrt.Name = "txtBoxOrt";
-      this.txtBoxOrt.Size = new System.Drawing.Size(436, 71);
-      this.txtBoxOrt.TabIndex = 8;
-      // 
       // btnInsert
       // 
       this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -291,14 +320,7 @@ namespace ServiceOne.Views
       this.btnInsert.TabIndex = 13;
       this.btnInsert.Text = "INSERT";
       this.btnInsert.UseVisualStyleBackColor = true;
-      // 
-      // txtBoxTelefon
-      // 
-      this.txtBoxTelefon.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.txtBoxTelefon.Location = new System.Drawing.Point(1588, 368);
-      this.txtBoxTelefon.Name = "txtBoxTelefon";
-      this.txtBoxTelefon.Size = new System.Drawing.Size(436, 71);
-      this.txtBoxTelefon.TabIndex = 10;
+      this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
       // 
       // label6
       // 
@@ -307,7 +329,7 @@ namespace ServiceOne.Views
       this.label6.Name = "label6";
       this.label6.Size = new System.Drawing.Size(475, 71);
       this.label6.TabIndex = 19;
-      this.label6.Text = "Mindestbestand";
+      this.label6.Text = "Hausnummer";
       // 
       // label5
       // 
@@ -316,15 +338,7 @@ namespace ServiceOne.Views
       this.label5.Name = "label5";
       this.label5.Size = new System.Drawing.Size(475, 71);
       this.label5.TabIndex = 17;
-      this.label5.Text = "Straße";
-      // 
-      // txtBoxRabatt
-      // 
-      this.txtBoxRabatt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.txtBoxRabatt.Location = new System.Drawing.Point(1588, 471);
-      this.txtBoxRabatt.Name = "txtBoxRabatt";
-      this.txtBoxRabatt.Size = new System.Drawing.Size(436, 71);
-      this.txtBoxRabatt.TabIndex = 11;
+      this.label5.Text = "Strasse";
       // 
       // txtBoxFirma
       // 
@@ -334,32 +348,6 @@ namespace ServiceOne.Views
       this.txtBoxFirma.Size = new System.Drawing.Size(436, 71);
       this.txtBoxFirma.TabIndex = 2;
       // 
-      // txtBoxPlz
-      // 
-      this.txtBoxPlz.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.txtBoxPlz.Location = new System.Drawing.Point(1588, 71);
-      this.txtBoxPlz.Name = "txtBoxPlz";
-      this.txtBoxPlz.Size = new System.Drawing.Size(436, 71);
-      this.txtBoxPlz.TabIndex = 7;
-      // 
-      // label8
-      // 
-      this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.label8.Location = new System.Drawing.Point(1070, 171);
-      this.label8.Name = "label8";
-      this.label8.Size = new System.Drawing.Size(475, 71);
-      this.label8.TabIndex = 23;
-      this.label8.Text = "Ort";
-      // 
-      // label11
-      // 
-      this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.label11.Location = new System.Drawing.Point(1070, 471);
-      this.label11.Name = "label11";
-      this.label11.Size = new System.Drawing.Size(475, 71);
-      this.label11.TabIndex = 29;
-      this.label11.Text = "Rabatt";
-      // 
       // txtBoxStrasse
       // 
       this.txtBoxStrasse.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -368,354 +356,50 @@ namespace ServiceOne.Views
       this.txtBoxStrasse.Size = new System.Drawing.Size(436, 71);
       this.txtBoxStrasse.TabIndex = 5;
       // 
-      // dataGridView
-      // 
-      this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-      this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.dataGridView.Location = new System.Drawing.Point(0, 0);
-      this.dataGridView.Name = "dataGridView";
-      this.dataGridView.RowTemplate.Height = 46;
-      this.dataGridView.Size = new System.Drawing.Size(4000, 522);
-      this.dataGridView.TabIndex = 17;
-      // 
-      // groupBox1
-      // 
-      this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
-      this.groupBox1.Controls.Add(this.button1);
-      this.groupBox1.Controls.Add(this.label12);
-      this.groupBox1.Controls.Add(this.label13);
-      this.groupBox1.Controls.Add(this.textBox1);
-      this.groupBox1.Controls.Add(this.label14);
-      this.groupBox1.Controls.Add(this.button2);
-      this.groupBox1.Controls.Add(this.textBox2);
-      this.groupBox1.Controls.Add(this.label15);
-      this.groupBox1.Controls.Add(this.textBox3);
-      this.groupBox1.Controls.Add(this.label16);
-      this.groupBox1.Controls.Add(this.textBox4);
-      this.groupBox1.Controls.Add(this.textBox5);
-      this.groupBox1.Controls.Add(this.button3);
-      this.groupBox1.Controls.Add(this.label17);
-      this.groupBox1.Controls.Add(this.label18);
-      this.groupBox1.Controls.Add(this.textBox6);
-      this.groupBox1.Controls.Add(this.button4);
-      this.groupBox1.Controls.Add(this.textBox7);
-      this.groupBox1.Controls.Add(this.label19);
-      this.groupBox1.Controls.Add(this.label20);
-      this.groupBox1.Controls.Add(this.textBox8);
-      this.groupBox1.Controls.Add(this.textBox9);
-      this.groupBox1.Controls.Add(this.textBox10);
-      this.groupBox1.Controls.Add(this.label21);
-      this.groupBox1.Controls.Add(this.label22);
-      this.groupBox1.Controls.Add(this.textBox11);
-      this.groupBox1.Location = new System.Drawing.Point(10, 600);
-      this.groupBox1.Name = "groupBox1";
-      this.groupBox1.Size = new System.Drawing.Size(2092, 870);
-      this.groupBox1.TabIndex = 32;
-      this.groupBox1.TabStop = false;
-      this.groupBox1.Text = "Kunden";
-      // 
-      // button1
-      // 
-      this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.button1.Location = new System.Drawing.Point(1697, 738);
-      this.button1.Name = "button1";
-      this.button1.Size = new System.Drawing.Size(324, 103);
-      this.button1.TabIndex = 15;
-      this.button1.Text = "DELETE";
-      this.button1.UseVisualStyleBackColor = true;
-      // 
-      // label12
-      // 
-      this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.label12.Location = new System.Drawing.Point(30, 171);
-      this.label12.Name = "label12";
-      this.label12.Size = new System.Drawing.Size(475, 71);
-      this.label12.TabIndex = 11;
-      this.label12.Text = "Firma";
-      // 
-      // label13
-      // 
-      this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
-      this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.label13.Location = new System.Drawing.Point(30, 71);
-      this.label13.Name = "label13";
-      this.label13.Size = new System.Drawing.Size(475, 71);
-      this.label13.TabIndex = 0;
-      this.label13.Text = "KundenID";
-      this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-      // 
-      // textBox1
-      // 
-      this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.textBox1.Location = new System.Drawing.Point(1585, 268);
-      this.textBox1.Name = "textBox1";
-      this.textBox1.Size = new System.Drawing.Size(436, 71);
-      this.textBox1.TabIndex = 9;
-      // 
-      // label14
-      // 
-      this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.label14.Location = new System.Drawing.Point(30, 371);
-      this.label14.Name = "label14";
-      this.label14.Size = new System.Drawing.Size(475, 71);
-      this.label14.TabIndex = 15;
-      this.label14.Text = "Nachname";
-      // 
-      // button2
-      // 
-      this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.button2.Location = new System.Drawing.Point(1070, 738);
-      this.button2.Name = "button2";
-      this.button2.Size = new System.Drawing.Size(324, 103);
-      this.button2.TabIndex = 14;
-      this.button2.Text = "UPDATE";
-      this.button2.UseVisualStyleBackColor = true;
-      // 
-      // textBox2
-      // 
-      this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.textBox2.Location = new System.Drawing.Point(548, 271);
-      this.textBox2.Name = "textBox2";
-      this.textBox2.Size = new System.Drawing.Size(436, 71);
-      this.textBox2.TabIndex = 3;
-      // 
-      // label15
-      // 
-      this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.label15.Location = new System.Drawing.Point(1070, 271);
-      this.label15.Name = "label15";
-      this.label15.Size = new System.Drawing.Size(475, 71);
-      this.label15.TabIndex = 25;
-      this.label15.Text = "Email";
-      // 
-      // textBox3
-      // 
-      this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.textBox3.Location = new System.Drawing.Point(548, 71);
-      this.textBox3.Name = "textBox3";
-      this.textBox3.Size = new System.Drawing.Size(436, 71);
-      this.textBox3.TabIndex = 1;
-      // 
-      // label16
-      // 
-      this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.label16.Location = new System.Drawing.Point(1070, 371);
-      this.label16.Name = "label16";
-      this.label16.Size = new System.Drawing.Size(475, 71);
-      this.label16.TabIndex = 27;
-      this.label16.Text = "Telefon";
-      // 
-      // textBox4
-      // 
-      this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.textBox4.Location = new System.Drawing.Point(548, 571);
-      this.textBox4.Name = "textBox4";
-      this.textBox4.Size = new System.Drawing.Size(436, 71);
-      this.textBox4.TabIndex = 6;
-      // 
-      // textBox5
-      // 
-      this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.textBox5.Location = new System.Drawing.Point(548, 371);
-      this.textBox5.Name = "textBox5";
-      this.textBox5.Size = new System.Drawing.Size(436, 71);
-      this.textBox5.TabIndex = 4;
-      // 
-      // button3
-      // 
-      this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.button3.Location = new System.Drawing.Point(30, 738);
-      this.button3.Name = "button3";
-      this.button3.Size = new System.Drawing.Size(324, 103);
-      this.button3.TabIndex = 12;
-      this.button3.Text = "RESET";
-      this.button3.UseVisualStyleBackColor = true;
-      // 
-      // label17
-      // 
-      this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.label17.Location = new System.Drawing.Point(30, 271);
-      this.label17.Name = "label17";
-      this.label17.Size = new System.Drawing.Size(475, 71);
-      this.label17.TabIndex = 13;
-      this.label17.Text = "Vorname";
-      // 
-      // label18
-      // 
-      this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.label18.Location = new System.Drawing.Point(1070, 71);
-      this.label18.Name = "label18";
-      this.label18.Size = new System.Drawing.Size(475, 71);
-      this.label18.TabIndex = 21;
-      this.label18.Text = "Postleitzahl";
-      // 
-      // textBox6
-      // 
-      this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.textBox6.Location = new System.Drawing.Point(1588, 171);
-      this.textBox6.Name = "textBox6";
-      this.textBox6.Size = new System.Drawing.Size(436, 71);
-      this.textBox6.TabIndex = 8;
-      // 
-      // button4
-      // 
-      this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.button4.Location = new System.Drawing.Point(548, 738);
-      this.button4.Name = "button4";
-      this.button4.Size = new System.Drawing.Size(324, 103);
-      this.button4.TabIndex = 13;
-      this.button4.Text = "INSERT";
-      this.button4.UseVisualStyleBackColor = true;
-      // 
-      // textBox7
-      // 
-      this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.textBox7.Location = new System.Drawing.Point(1588, 368);
-      this.textBox7.Name = "textBox7";
-      this.textBox7.Size = new System.Drawing.Size(436, 71);
-      this.textBox7.TabIndex = 10;
-      // 
-      // label19
-      // 
-      this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.label19.Location = new System.Drawing.Point(30, 571);
-      this.label19.Name = "label19";
-      this.label19.Size = new System.Drawing.Size(475, 71);
-      this.label19.TabIndex = 19;
-      this.label19.Text = "Hausnummer";
-      // 
-      // label20
-      // 
-      this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.label20.Location = new System.Drawing.Point(30, 471);
-      this.label20.Name = "label20";
-      this.label20.Size = new System.Drawing.Size(475, 71);
-      this.label20.TabIndex = 17;
-      this.label20.Text = "Straße";
-      // 
-      // textBox8
-      // 
-      this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.textBox8.Location = new System.Drawing.Point(1588, 471);
-      this.textBox8.Name = "textBox8";
-      this.textBox8.Size = new System.Drawing.Size(436, 71);
-      this.textBox8.TabIndex = 11;
-      // 
-      // textBox9
-      // 
-      this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.textBox9.Location = new System.Drawing.Point(548, 171);
-      this.textBox9.Name = "textBox9";
-      this.textBox9.Size = new System.Drawing.Size(436, 71);
-      this.textBox9.TabIndex = 2;
-      // 
-      // textBox10
-      // 
-      this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.textBox10.Location = new System.Drawing.Point(1588, 71);
-      this.textBox10.Name = "textBox10";
-      this.textBox10.Size = new System.Drawing.Size(436, 71);
-      this.textBox10.TabIndex = 7;
-      // 
-      // label21
-      // 
-      this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.label21.Location = new System.Drawing.Point(1070, 171);
-      this.label21.Name = "label21";
-      this.label21.Size = new System.Drawing.Size(475, 71);
-      this.label21.TabIndex = 23;
-      this.label21.Text = "Ort";
-      // 
-      // label22
-      // 
-      this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.label22.Location = new System.Drawing.Point(1070, 471);
-      this.label22.Name = "label22";
-      this.label22.Size = new System.Drawing.Size(475, 71);
-      this.label22.TabIndex = 29;
-      this.label22.Text = "Rabatt";
-      // 
-      // textBox11
-      // 
-      this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.textBox11.Location = new System.Drawing.Point(548, 471);
-      this.textBox11.Name = "textBox11";
-      this.textBox11.Size = new System.Drawing.Size(436, 71);
-      this.textBox11.TabIndex = 5;
-      // 
       // UcKunden
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.BackColor = System.Drawing.SystemColors.Control;
-      this.Controls.Add(this.groupBox1);
+      this.Controls.Add(this.grpBox);
       this.Controls.Add(this.panelArtikel);
       this.Location = new System.Drawing.Point(15, 15);
       this.Name = "UcKunden";
       this.Size = new System.Drawing.Size(4000, 1600);
       this.panelArtikel.ResumeLayout(false);
-      this.Kundendaten.ResumeLayout(false);
-      this.Kundendaten.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
-      this.groupBox1.ResumeLayout(false);
-      this.groupBox1.PerformLayout();
+      this.grpBox.ResumeLayout(false);
+      this.grpBox.PerformLayout();
       this.ResumeLayout(false);
     }
 
-    private System.Windows.Forms.GroupBox groupBox1;
-    private System.Windows.Forms.Button button1;
+    private System.Windows.Forms.Label label9;
+    private System.Windows.Forms.Label label10;
+    private System.Windows.Forms.Label label11;
+    private System.Windows.Forms.TextBox txtBoxEmail;
+    private System.Windows.Forms.TextBox txtBoxPostleitzahl;
+    private System.Windows.Forms.TextBox txtBoxTelefon;
     private System.Windows.Forms.Label label12;
     private System.Windows.Forms.Label label13;
-    private System.Windows.Forms.TextBox textBox1;
-    private System.Windows.Forms.Label label14;
-    private System.Windows.Forms.Button button2;
-    private System.Windows.Forms.TextBox textBox2;
-    private System.Windows.Forms.Label label15;
-    private System.Windows.Forms.TextBox textBox3;
-    private System.Windows.Forms.Label label16;
-    private System.Windows.Forms.TextBox textBox4;
-    private System.Windows.Forms.TextBox textBox5;
-    private System.Windows.Forms.Button button3;
-    private System.Windows.Forms.Label label17;
-    private System.Windows.Forms.Label label18;
-    private System.Windows.Forms.TextBox textBox6;
-    private System.Windows.Forms.Button button4;
-    private System.Windows.Forms.TextBox textBox7;
-    private System.Windows.Forms.Label label19;
-    private System.Windows.Forms.Label label20;
-    private System.Windows.Forms.TextBox textBox8;
-    private System.Windows.Forms.TextBox textBox9;
-    private System.Windows.Forms.TextBox textBox10;
-    private System.Windows.Forms.Label label21;
-    private System.Windows.Forms.Label label22;
-    private System.Windows.Forms.TextBox textBox11;
+    private System.Windows.Forms.TextBox txtBoxOrt;
+    private System.Windows.Forms.TextBox txtBoxRabatt;
 
-    private System.Windows.Forms.GroupBox Kundendaten;
+    private System.Windows.Forms.GroupBox grpBox;
     private System.Windows.Forms.Button btnDelete;
     private System.Windows.Forms.Label label2;
     private System.Windows.Forms.Label label1;
-    private System.Windows.Forms.TextBox txtBoxEmail;
     private System.Windows.Forms.Label label4;
     private System.Windows.Forms.Button btnUpdate;
     private System.Windows.Forms.TextBox txtBoxVorname;
-    private System.Windows.Forms.Label label9;
     private System.Windows.Forms.TextBox txtBoxKundenID;
-    private System.Windows.Forms.Label label10;
     private System.Windows.Forms.TextBox txtBoxHausnummer;
     private System.Windows.Forms.TextBox txtBoxNachname;
     private System.Windows.Forms.Button btnReset;
     private System.Windows.Forms.Label label3;
-    private System.Windows.Forms.Label label7;
-    private System.Windows.Forms.TextBox txtBoxOrt;
     private System.Windows.Forms.Button btnInsert;
-    private System.Windows.Forms.TextBox txtBoxTelefon;
     private System.Windows.Forms.Label label6;
     private System.Windows.Forms.Label label5;
-    private System.Windows.Forms.TextBox txtBoxRabatt;
     private System.Windows.Forms.TextBox txtBoxFirma;
-    private System.Windows.Forms.TextBox txtBoxPlz;
-    private System.Windows.Forms.Label label8;
-    private System.Windows.Forms.Label label11;
     private System.Windows.Forms.TextBox txtBoxStrasse;
 
     private System.Windows.Forms.DataGridView dataGridView;

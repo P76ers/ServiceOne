@@ -86,10 +86,10 @@ namespace ServiceOne.Model
 
     #region Lager
 
-    private static Lager lager = new Lager("Hauptlager HH", 1, 12, 5, 1);
-    private static Lager lager2 = new Lager("Dummy", 1, 12, 5, 1);
-    private static Lager lager3 = new Lager(2,"Jackson", 2, 11, 5, 1);
-    
+    private static Lager lager = new Lager(1, 3, 5, 1);
+    private static Lager lager2 = new Lager(1, 4, 6, 2);
+    private static Lager lager3 = new Lager(1, 3, 6, 6);
+
     #endregion
 
     public static void Run()
@@ -192,7 +192,7 @@ namespace ServiceOne.Model
 
       // Update
       // DBLager.UpdateLager(lager3);
-      
+
       #endregion
     }
   }

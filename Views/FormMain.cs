@@ -97,7 +97,7 @@ namespace ServiceOne.Views
 
     private void btnWarenkorb_MouseMove(object sender, MouseEventArgs e)
     {
-      lblMenu.Text = "neue Bestellung";
+      lblMenu.Text = "neuer Auftrag";
     }
 
     private void btnWarenkorb_MouseLeave(object sender, EventArgs e)
@@ -137,7 +137,7 @@ namespace ServiceOne.Views
 
     private void btnWarenkorb_Click(object sender, EventArgs e)
     {
-      UcNeueBestellung ucNeueBestellung = new UcNeueBestellung();
+      UcAuftrag ucNeueBestellung = new UcAuftrag();
       addUserControl(ucNeueBestellung);
     }
 

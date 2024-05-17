@@ -32,7 +32,7 @@
       System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
       this.panelHeader = new System.Windows.Forms.FlowLayoutPanel();
       this.panelMain = new System.Windows.Forms.Panel();
-      this.btnWarenkorb = new System.Windows.Forms.Button();
+      this.btnAuftrag = new System.Windows.Forms.Button();
       this.btnBestellungen = new System.Windows.Forms.Button();
       this.btnArtikelkategorien = new System.Windows.Forms.Button();
       this.btnArtikel = new System.Windows.Forms.Button();
@@ -66,19 +66,19 @@
       this.panelMain.Size = new System.Drawing.Size(2142, 1161);
       this.panelMain.TabIndex = 4;
       // 
-      // btnWarenkorb
+      // btnAuftrag
       // 
-      this.btnWarenkorb.Anchor = System.Windows.Forms.AnchorStyles.None;
-      this.btnWarenkorb.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnWarenkorb.BackgroundImage")));
-      this.btnWarenkorb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-      this.btnWarenkorb.Location = new System.Drawing.Point(1701, 100);
-      this.btnWarenkorb.Name = "btnWarenkorb";
-      this.btnWarenkorb.Size = new System.Drawing.Size(175, 172);
-      this.btnWarenkorb.TabIndex = 9;
-      this.btnWarenkorb.UseVisualStyleBackColor = true;
-      this.btnWarenkorb.Click += new System.EventHandler(this.btnWarenkorb_Click);
-      this.btnWarenkorb.MouseLeave += new System.EventHandler(this.btnWarenkorb_MouseLeave);
-      this.btnWarenkorb.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnWarenkorb_MouseMove);
+      this.btnAuftrag.Anchor = System.Windows.Forms.AnchorStyles.None;
+      this.btnAuftrag.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAuftrag.BackgroundImage")));
+      this.btnAuftrag.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+      this.btnAuftrag.Location = new System.Drawing.Point(1701, 100);
+      this.btnAuftrag.Name = "btnAuftrag";
+      this.btnAuftrag.Size = new System.Drawing.Size(175, 172);
+      this.btnAuftrag.TabIndex = 9;
+      this.btnAuftrag.UseVisualStyleBackColor = true;
+      this.btnAuftrag.Click += new System.EventHandler(this.btnWarenkorb_Click);
+      this.btnAuftrag.MouseLeave += new System.EventHandler(this.btnWarenkorb_MouseLeave);
+      this.btnAuftrag.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnWarenkorb_MouseMove);
       // 
       // btnBestellungen
       // 
@@ -181,13 +181,15 @@
       // btnHome
       // 
       this.btnHome.Anchor = System.Windows.Forms.AnchorStyles.None;
+      this.btnHome.BackColor = System.Drawing.Color.White;
       this.btnHome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHome.BackgroundImage")));
       this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+      this.btnHome.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
       this.btnHome.Location = new System.Drawing.Point(253, 100);
       this.btnHome.Name = "btnHome";
       this.btnHome.Size = new System.Drawing.Size(175, 172);
       this.btnHome.TabIndex = 1;
-      this.btnHome.UseVisualStyleBackColor = true;
+      this.btnHome.UseVisualStyleBackColor = false;
       this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
       this.btnHome.MouseLeave += new System.EventHandler(this.btnHome_MouseLeave);
       this.btnHome.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnHome_MouseMove);
@@ -206,7 +208,7 @@
       // panel1
       // 
       this.panel1.BackColor = System.Drawing.SystemColors.MenuBar;
-      this.panel1.Controls.Add(this.btnWarenkorb);
+      this.panel1.Controls.Add(this.btnAuftrag);
       this.panel1.Controls.Add(this.lblMenu);
       this.panel1.Controls.Add(this.btnHome);
       this.panel1.Controls.Add(this.btnLager);
@@ -249,7 +251,7 @@
     private System.Windows.Forms.Button btnHome;
     private System.Windows.Forms.Label lblMenu;
     private System.Windows.Forms.Panel panel1;
-    private System.Windows.Forms.Button btnWarenkorb;
+    private System.Windows.Forms.Button btnAuftrag;
 
     private System.Windows.Forms.Panel panelMain;
 

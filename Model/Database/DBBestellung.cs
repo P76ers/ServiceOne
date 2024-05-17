@@ -70,7 +70,7 @@ namespace ServiceOne.Model.Database
         connection.Dispose();
       }
     }
-    
+
     public static void DeleteBestellung(Bestellung bestellung)
     {
       ConnectDatabase();
@@ -101,7 +101,7 @@ namespace ServiceOne.Model.Database
         connection.Dispose();
       }
     }
-    
+
     public static void UpdateBestellung(Bestellung bestellung)
     {
       ConnectDatabase();
@@ -111,9 +111,9 @@ namespace ServiceOne.Model.Database
         sql = "UPDATE bestellungen " +
               "SET KundenNr=@kundenNr,Datum=@datum " +
               "WHERE BestellID= " + bestellung.BestellId + ";";
-      
+
         command = new MySqlCommand(sql, connection);
-      
+
         command.Parameters.AddWithValue("KundenNr", bestellung.KundenNr);
         command.Parameters.AddWithValue("Datum", bestellung.Datum);
 
@@ -138,8 +138,6 @@ namespace ServiceOne.Model.Database
       {
         connection.Dispose();
       }
-      
     }
-
   }
 }

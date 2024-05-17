@@ -6,17 +6,17 @@ using ServiceOne.Model.Classes;
 
 namespace ServiceOne.Model.Database
 {
-  public class DBBestelldetails :DBModel
+  public class DBBestelldetails : DBModel
   {
     public static void SelectBestelldetails(DataGridView dataGridView)
     {
       try
       {
         ConnectDatabase();
-        
+
         sql = "SELECT * FROM bestelldetails;";
         command = new MySqlCommand(sql, connection);
-        
+
         adapter = new MySqlDataAdapter(command);
         dataset = new DataSet();
         adapter.Fill(dataset);
@@ -32,7 +32,7 @@ namespace ServiceOne.Model.Database
         connection.Close();
       }
     }
-    
+
     public static void InsertIntoBestelldetails(Bestelldetails bestelldetails)
     {
       try
@@ -50,7 +50,6 @@ namespace ServiceOne.Model.Database
         command.Parameters.AddWithValue("TechnikerNr", bestelldetails.TechnikerNr);
         command.Parameters.AddWithValue("ArtikelNr", bestelldetails.ArtikelNr);
         command.Parameters.AddWithValue("Anzahl", bestelldetails.Anzahl);
-
 
 
         int rowsAffected = command.ExecuteNonQuery();
@@ -73,14 +72,14 @@ namespace ServiceOne.Model.Database
         connection.Dispose();
       }
     }
-    
+
     public static void DeleteBestelldetails(Bestelldetails bestelldetails)
     {
       ConnectDatabase();
 
       try
       {
-        sql = "DELETE FROM bestelldetails WHERE BestellNr = " + bestelldetails.BestellNr + 
+        sql = "DELETE FROM bestelldetails WHERE BestellNr = " + bestelldetails.BestellNr +
               " AND TechnikerNr = " + bestelldetails.TechnikerNr + ";";
 
         command = new MySqlCommand(sql, connection);
@@ -89,7 +88,8 @@ namespace ServiceOne.Model.Database
 
         if (rowsAffected > 0)
         {
-          MessageBox.Show($"BestellNr / TechnikerNr {bestelldetails.BestellNr} / {bestelldetails.TechnikerNr} Gelöscht");
+          MessageBox.Show(
+            $"BestellNr / TechnikerNr {bestelldetails.BestellNr} / {bestelldetails.TechnikerNr} Gelöscht");
         }
         else
         {
@@ -113,13 +113,13 @@ namespace ServiceOne.Model.Database
       try
       {
         sql = "UPDATE bestelldetails " +
-              "SET ArtikelNr=@artikelNr,Anzahl=@anzahl " +
-              "WHERE BestellNr = " + bestelldetails.BestellNr + 
-              " AND TechnikerNr = " + bestelldetails.TechnikerNr + ";";
-      
+              "SET TechnikerNr=@technikerNr,Anzahl=@anzahl " +
+              "WHERE BestellNr = " + bestelldetails.BestellNr +
+              " AND ArtikelNr = " + bestelldetails.ArtikelNr + ";";
+
         command = new MySqlCommand(sql, connection);
-      
-        command.Parameters.AddWithValue("ArtikelNr", bestelldetails.ArtikelNr);
+
+        command.Parameters.AddWithValue("TechnikerNr", bestelldetails.TechnikerNr);
         command.Parameters.AddWithValue("Anzahl", bestelldetails.Anzahl);
 
 
@@ -127,8 +127,8 @@ namespace ServiceOne.Model.Database
 
         if (rowsAffected > 0)
         {
-          MessageBox.Show($"BestellNr / TechnikerNr {bestelldetails.BestellNr} / {bestelldetails.TechnikerNr} aktualisiert");
-
+          MessageBox.Show(
+            $"BestellNr / TechnikerNr {bestelldetails.BestellNr} / {bestelldetails.TechnikerNr} aktualisiert");
         }
         else
         {
@@ -144,9 +144,6 @@ namespace ServiceOne.Model.Database
       {
         connection.Dispose();
       }
-      
     }
-
-
   }
 }

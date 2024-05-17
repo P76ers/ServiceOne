@@ -5,11 +5,11 @@ namespace ServiceOne.Model.Classes
     private int bestellNr;
     private int technikerNr;
     private int artikelNr;
-    private int anzahl;
+    private double anzahl;
     
     public Bestelldetails(){}
 
-    public Bestelldetails(int bestellNr, int technikerNr, int artikelNr, int anzahl)
+    public Bestelldetails(int bestellNr, int technikerNr, int artikelNr, double anzahl)
     {
       this.bestellNr = bestellNr;
       this.technikerNr = technikerNr;
@@ -37,7 +37,7 @@ namespace ServiceOne.Model.Classes
       set => artikelNr = value;
     }
 
-    public int Anzahl
+    public double Anzahl
     {
       get => anzahl;
       set => anzahl = value;

@@ -34,6 +34,7 @@ namespace ServiceOne.Views
       this.panelArtikel = new System.Windows.Forms.Panel();
       this.dataGridView = new System.Windows.Forms.DataGridView();
       this.grpBox = new System.Windows.Forms.GroupBox();
+      this.txtBoxRichBeschreibung = new System.Windows.Forms.RichTextBox();
       this.btnDelete = new System.Windows.Forms.Button();
       this.label2 = new System.Windows.Forms.Label();
       this.label1 = new System.Windows.Forms.Label();
@@ -50,8 +51,7 @@ namespace ServiceOne.Views
       this.label6 = new System.Windows.Forms.Label();
       this.label5 = new System.Windows.Forms.Label();
       this.txtBoxMaterialNr = new System.Windows.Forms.TextBox();
-      this.txtBoxkategorieNr = new System.Windows.Forms.TextBox();
-      this.txtBoxRichBeschreibung = new System.Windows.Forms.RichTextBox();
+      this.txtBoxKategorieNr = new System.Windows.Forms.TextBox();
       this.panelArtikel.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
       this.grpBox.SuspendLayout();
@@ -75,6 +75,7 @@ namespace ServiceOne.Views
       this.dataGridView.RowTemplate.Height = 46;
       this.dataGridView.Size = new System.Drawing.Size(4000, 522);
       this.dataGridView.TabIndex = 3;
+      this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
       // 
       // grpBox
       // 
@@ -96,13 +97,21 @@ namespace ServiceOne.Views
       this.grpBox.Controls.Add(this.label6);
       this.grpBox.Controls.Add(this.label5);
       this.grpBox.Controls.Add(this.txtBoxMaterialNr);
-      this.grpBox.Controls.Add(this.txtBoxkategorieNr);
+      this.grpBox.Controls.Add(this.txtBoxKategorieNr);
       this.grpBox.Location = new System.Drawing.Point(10, 600);
       this.grpBox.Name = "grpBox";
       this.grpBox.Size = new System.Drawing.Size(2092, 870);
       this.grpBox.TabIndex = 32;
       this.grpBox.TabStop = false;
       this.grpBox.Text = "Artikel";
+      // 
+      // txtBoxRichBeschreibung
+      // 
+      this.txtBoxRichBeschreibung.Location = new System.Drawing.Point(1588, 71);
+      this.txtBoxRichBeschreibung.Name = "txtBoxRichBeschreibung";
+      this.txtBoxRichBeschreibung.Size = new System.Drawing.Size(436, 571);
+      this.txtBoxRichBeschreibung.TabIndex = 7;
+      this.txtBoxRichBeschreibung.Text = "";
       // 
       // btnDelete
       // 
@@ -113,6 +122,7 @@ namespace ServiceOne.Views
       this.btnDelete.TabIndex = 15;
       this.btnDelete.Text = "DELETE";
       this.btnDelete.UseVisualStyleBackColor = true;
+      this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
       // 
       // label2
       // 
@@ -152,6 +162,7 @@ namespace ServiceOne.Views
       this.btnUpdate.TabIndex = 14;
       this.btnUpdate.Text = "UPDATE";
       this.btnUpdate.UseVisualStyleBackColor = true;
+      this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
       // 
       // txtBoxArtikelname
       // 
@@ -194,6 +205,7 @@ namespace ServiceOne.Views
       this.btnReset.TabIndex = 12;
       this.btnReset.Text = "RESET";
       this.btnReset.UseVisualStyleBackColor = true;
+      this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
       // 
       // label3
       // 
@@ -222,6 +234,7 @@ namespace ServiceOne.Views
       this.btnInsert.TabIndex = 13;
       this.btnInsert.Text = "INSERT";
       this.btnInsert.UseVisualStyleBackColor = true;
+      this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
       // 
       // label6
       // 
@@ -249,21 +262,13 @@ namespace ServiceOne.Views
       this.txtBoxMaterialNr.Size = new System.Drawing.Size(436, 71);
       this.txtBoxMaterialNr.TabIndex = 2;
       // 
-      // txtBoxkategorieNr
+      // txtBoxKategorieNr
       // 
-      this.txtBoxkategorieNr.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.txtBoxkategorieNr.Location = new System.Drawing.Point(548, 471);
-      this.txtBoxkategorieNr.Name = "txtBoxkategorieNr";
-      this.txtBoxkategorieNr.Size = new System.Drawing.Size(436, 71);
-      this.txtBoxkategorieNr.TabIndex = 5;
-      // 
-      // txtBoxRichBeschreibung
-      // 
-      this.txtBoxRichBeschreibung.Location = new System.Drawing.Point(1588, 71);
-      this.txtBoxRichBeschreibung.Name = "txtBoxRichBeschreibung";
-      this.txtBoxRichBeschreibung.Size = new System.Drawing.Size(436, 571);
-      this.txtBoxRichBeschreibung.TabIndex = 7;
-      this.txtBoxRichBeschreibung.Text = "";
+      this.txtBoxKategorieNr.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.txtBoxKategorieNr.Location = new System.Drawing.Point(548, 471);
+      this.txtBoxKategorieNr.Name = "txtBoxKategorieNr";
+      this.txtBoxKategorieNr.Size = new System.Drawing.Size(436, 71);
+      this.txtBoxKategorieNr.TabIndex = 5;
       // 
       // UcArtikel
       // 
@@ -301,7 +306,7 @@ namespace ServiceOne.Views
     private System.Windows.Forms.Label label6;
     private System.Windows.Forms.Label label5;
     private System.Windows.Forms.TextBox txtBoxMaterialNr;
-    private System.Windows.Forms.TextBox txtBoxkategorieNr;
+    private System.Windows.Forms.TextBox txtBoxKategorieNr;
 
     private System.Windows.Forms.DataGridView dataGridView;
 

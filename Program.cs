@@ -19,16 +19,15 @@ namespace ServiceOne
     {
       DBModel.CreateDatabase("ServiceOne");
       DBModel.CreateTables();
+      // DBAddData.InsertValues();
       // DBModel.DropDatabase("ServiceOne");
 
       // Test Area
-      DBCrudTest.Run();
-      
+      // DBCrudTest.Run();
 
       Application.EnableVisualStyles();
       Application.SetCompatibleTextRenderingDefault(false);
       Application.Run(new FormMain());
-      
     }
   }
 }

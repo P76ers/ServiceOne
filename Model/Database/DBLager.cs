@@ -13,10 +13,12 @@ namespace ServiceOne.Model.Database
       try
       {
         ConnectDatabase();
-        
-        sql = "SELECT * FROM lager;";
+
+        sql = "SELECT CONCAT (Vorname, ' ', Nachname) AS Lagername, " +
+              "LagerNr, ArtikelNr, Bestand, Mindestbestand " +
+              "FROM lager INNER JOIN techniker ON LagerNr = TechnikerID;";
         command = new MySqlCommand(sql, connection);
-        
+
         adapter = new MySqlDataAdapter(command);
         dataset = new DataSet();
         adapter.Fill(dataset);
@@ -32,7 +34,7 @@ namespace ServiceOne.Model.Database
         connection.Close();
       }
     }
-    
+
     public static void InsertIntoLager(Lager lager)
     {
       try
@@ -40,18 +42,15 @@ namespace ServiceOne.Model.Database
         ConnectDatabase();
 
         sql =
-          "INSERT INTO lager(Lagername, TechnikerNr, Bestand, Mindestbestand, ArtikelNr) " +
-          "VALUES (@lagername, @technikerNr, @bestand, @mindestbestand, @artikelNr);";
-
+          "INSERT INTO lager(LagerNr, ArtikelNr, Bestand, Mindestbestand) " +
+          "VALUES (@lagerNr, @artikelNr, @bestand, @mindestbestand);";
 
         command = new MySqlCommand(sql, connection);
 
-        command.Parameters.AddWithValue("Lagername", lager.LagerName);
-        command.Parameters.AddWithValue("TechnikerNr", lager.TechnikerNr);
+        command.Parameters.AddWithValue("LagerNr", lager.LagerNr);
+        command.Parameters.AddWithValue("ArtikelNr", lager.ArtikelNr);
         command.Parameters.AddWithValue("Bestand", lager.Bestand);
         command.Parameters.AddWithValue("Mindestbestand", lager.MindestBestand);
-        command.Parameters.AddWithValue("ArtikelNr", lager.ArtikelNr);
-
 
         int rowsAffected = command.ExecuteNonQuery();
 
@@ -80,9 +79,8 @@ namespace ServiceOne.Model.Database
 
       try
       {
-        sql = "DELETE FROM lager WHERE Lagername = '" + lager.LagerName + 
-              "' AND TechnikerNr = " + lager.TechnikerNr + ";";
-
+        sql = "DELETE FROM lager WHERE LagerNr = '" + lager.LagerNr +
+              "' AND ArtikelNr = " + lager.ArtikelNr + ";";
 
         command = new MySqlCommand(sql, connection);
 
@@ -90,7 +88,8 @@ namespace ServiceOne.Model.Database
 
         if (rowsAffected > 0)
         {
-          MessageBox.Show($"Lager: {lager.LagerName} Gelöscht");
+          MessageBox.Show(
+            $"LagerNr / ArtikelNr {lager.LagerNr} / {lager.ArtikelNr} gelöscht");
         }
         else
         {
@@ -106,7 +105,7 @@ namespace ServiceOne.Model.Database
         connection.Dispose();
       }
     }
-    
+
     public static void UpdateLager(Lager lager)
     {
       ConnectDatabase();
@@ -114,23 +113,23 @@ namespace ServiceOne.Model.Database
       try
       {
         sql = "UPDATE lager " +
-              "SET Lagername=@lagername,TechnikerNr=@technikerNr,Bestand=@bestand,Mindestbestand=@mindestbestand, " +
-              "ArtikelNr=@artikelNr WHERE LagerID= " + lager.LagerId + ";";
-      
+              "SET LagerNr=@lagerNr,ArtikelNr=@artikelNr,Bestand=@bestand,Mindestbestand=@mindestbestand " +
+              "WHERE LagerNr= " + lager.LagerNr + " " +
+              "AND ArtikelNr= " + lager.ArtikelNr +
+              ";";
+
         command = new MySqlCommand(sql, connection);
-      
-        command.Parameters.AddWithValue("Lagername", lager.LagerName);
-        command.Parameters.AddWithValue("TechnikerNr", lager.TechnikerNr);
+
+        command.Parameters.AddWithValue("LagerNr", lager.LagerNr);
+        command.Parameters.AddWithValue("ArtikelNr", lager.ArtikelNr);
         command.Parameters.AddWithValue("Bestand", lager.Bestand);
         command.Parameters.AddWithValue("Mindestbestand", lager.MindestBestand);
-        command.Parameters.AddWithValue("ArtikelNr", lager.ArtikelNr);
-
 
         int rowsAffected = command.ExecuteNonQuery();
 
         if (rowsAffected > 0)
         {
-          MessageBox.Show($"ID:{lager.LagerId} aktualisiert!");
+          MessageBox.Show($"LagerNr / ArtikelNr {lager.LagerNr} / {lager.ArtikelNr} aktualisiert!");
         }
         else
         {
@@ -146,10 +145,6 @@ namespace ServiceOne.Model.Database
       {
         connection.Dispose();
       }
-      
     }
-
-
-
   }
 }
