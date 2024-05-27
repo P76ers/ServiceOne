@@ -21,7 +21,7 @@ von Ersatzteilen, Besonderheit ist die Verwaltung unterschiedlicher Lager
 
 ![database.png](Ressources%2Fdatabase.png)
 
-- [download]((https://github.com/P76ers/ServiceOne/blob/main/Ressources/serviceone.sql))
+- [download](https://github.com/P76ers/ServiceOne/blob/main/Ressources/serviceone.sql)
  or run `DBAddData.InsertValues();`
   
 ```c#
